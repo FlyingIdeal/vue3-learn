@@ -671,3 +671,58 @@ new Proxy(data, {
 
 ![](http://m.qpic.cn/psc?/V11p5mQv2iuIp0/TmEUgtj9EK6.7V8ajmQrELWb7OsXbqnijilvwisEpa79peLdpJRUy8O3FJUtM2*JWUKxKVCU7wgtTS4lV*4ruc4SOC2TlzGA5eSJU.j44CE!/b&bo=1ASaAgAAAAABF3g!&rf=viewer_4)
 
+###### defineComponent
+
+```
+import {defineComponent} form 'vue'
+const component = {
+	name: 'hello',
+	props: {
+		msg: {
+			required: true,
+			type: String
+		}
+	}
+	setup(props, context) {
+		// 1. 其中props就是上面的props传入的数据
+		console.log(props.msg)
+		
+		// 2. context
+		// vue3中，在setup不能像vue2中，可以直接使用this
+		// 所以context提供了3个最常用的属性
+		// context.attrs   ===>  对应vue2中的 $ attribute
+		// context.slots   ===>  插槽
+		// context.emit    ===>  发送事件
+	}
+}
+```
+
+#### Teleport (瞬间移动 / 传送门)
+
+###### 常见问题
+
+- 例如Dialog，被包裹在其他子组件之中，容易被干扰（在项目中经常使用iview的  drawer 组件，本身应该放在全局，但实际被包裹在子组件内，容易受父级样式影响）
+
+- 样式也在其他组件内，容易变的非常混乱
+
+###### 举例说明
+
+![](http://m.qpic.cn/psc?/V11p5mQv2iuIp0/TmEUgtj9EK6.7V8ajmQrEI1ZCf4EDXWBYriZ0PEqIfEO0a9LbXJ652ZUGw.qdkbtBAusg5unMvHXCCBCdCmS2OOMCTmUFI1gGhJQ5JncHQ8!/b&bo=OASeBQAAAAADR8U!&rf=viewer_4)
+
+#### Suspense 组件的异步请求
+
+###### 常见问题
+
+- 异步组件内有许多异步请求，要根据异步请求是否完成展示不同的loading提示页面
+
+###### 使用时注意的点
+
+- 要返回一个 promise 对象
+
+###### 图片举例说明
+
+![](http://m.qpic.cn/psc?/V11p5mQv2iuIp0/TmEUgtj9EK6.7V8ajmQrECeDOVoTnBpM7wFQ00I1YwIlAhDsSyzBHvqNcUMPWXkm0nHALerEsX0FDRHi.ykZQQ9Ar.2LD0A.ry2IexAWqhY!/b&bo=OATHBAAAAAADR50!&rf=viewer_4)
+
+#### vue3和vue2对于全局api格式区别
+
+![](http://m.qpic.cn/psc?/V11p5mQv2iuIp0/TmEUgtj9EK6.7V8ajmQrEPlFTbuMvQiN6j*5tDizPH2IfV55fkG0mavVWMpViiTNn6BThFLv4NPwQF3q6DqA2OrT3tJ.112uE0YzFGa43FU!/b&bo=dQM7BgAAAAADJ0k!&rf=viewer_4)
