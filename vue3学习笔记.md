@@ -726,3 +726,29 @@ const component = {
 #### vue3和vue2对于全局api格式区别
 
 ![](http://m.qpic.cn/psc?/V11p5mQv2iuIp0/TmEUgtj9EK6.7V8ajmQrEPlFTbuMvQiN6j*5tDizPH2IfV55fkG0mavVWMpViiTNn6BThFLv4NPwQF3q6DqA2OrT3tJ.112uE0YzFGa43FU!/b&bo=dQM7BgAAAAADJ0k!&rf=viewer_4)
+
+
+
+
+## 第四章：项目启航
+
+
+
+
+#### 1.需求分细
+
+- 数据的展示：最好是有多级复杂数据的展示
+- 数据的创建：可以发散出多个功能
+- 组件的抽象：循序渐进的组件开发
+- 整体状态数据结构的设计和实现
+- 权限管理和控制
+
+
+#### 2.文件结构和数据结构
+
+- 常用的CSS样式库
+
+1. bootstrap: https://getbootstrap.com/
+2. tailwindcss(国外较火): https://tailwindcss.com/
+3. foundation :http://get.foundation/develop/getting-started.html
+
